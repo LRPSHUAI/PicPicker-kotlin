@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="layout_background_f8">#f8f8f8</color>
+    <color name="theme_color">#FFB3B3</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_dddddd">#dddddd</color>
+    <color name="color_ee4e4e">#ee4e4e</color>
+    <color name="color_black">#000000</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_40000000">#40000000</color>
+    <color name="color_70000000">#70000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_toolbar">@color/theme_color</color>
+</resources>

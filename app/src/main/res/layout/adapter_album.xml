@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><!--相册文件夹列表条目-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/iv_album_pic"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@color/layout_background_f8"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_pp_album_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textColor="@color/color_555555"
+            android:textSize="@dimen/txt_size_30" />
+
+        <TextView
+            android:id="@+id/tv_pp_album_num"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/txt_size_24" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_album_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_select"
+        android:visibility="gone" />
+
+</LinearLayout>

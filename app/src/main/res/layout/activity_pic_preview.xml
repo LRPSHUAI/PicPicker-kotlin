@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?><!--相册图片预览-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_background_f8">
+
+    <com.lrpshuai.picpicker.weight.ToolbarView
+        android:id="@+id/tb_picpre_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        app:right_text_button="确定" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_picpre_top"
+        android:orientation="vertical">
+
+        <com.lrpshuai.picpicker.weight.photoviews.PhotoViewPager
+            android:id="@+id/pvp_picpre_pic"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_picpre_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="13dp"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/txt_size_30" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/llt_picpre_original"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="13dp">
+
+                <ImageView
+                    android:id="@+id/iv_picpre_original"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/btn_state_normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="原图"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/txt_size_30" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/llt_picpre_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="13dp">
+
+                <ImageView
+                    android:id="@+id/iv_picpre_select"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/btn_picker_normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="选择"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/txt_size_30" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/rlt_picpre_wait"
+        layout="@layout/state_wait"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_picpre_top"
+        android:background="@color/color_40000000" />
+
+</RelativeLayout>

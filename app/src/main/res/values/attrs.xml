@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义toolbar-->
+    <declare-styleable name="CustomToolbar">
+        <!--标题文字-->
+        <attr name="titleText" format="string" />
+        <!--右侧的文字按钮的文字-->
+        <attr name="right_text_button" format="string" />
+        <!--右侧的第一个图片按钮的图片-->
+        <attr name="right_first_img_button" format="reference" />
+        <!--右侧的第二个图片按钮的图片-->
+        <attr name="right_second_img_button" format="reference" />
+        <!--是否隐藏返回按钮-->
+        <attr name="is_hide_back_button" format="boolean" />
+        <!--是否显示 倒计时图标-->
+        <attr name="isShowClock" format="boolean" />
+    </declare-styleable>
+
+</resources>

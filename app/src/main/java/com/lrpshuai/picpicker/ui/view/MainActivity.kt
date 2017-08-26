@@ -69,6 +69,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 val bundle = Bundle().apply { putInt(PicturePickerActivity.SELECT_PICTURE_NUM, 9) }
                 startActi(bundle, PicturePickerActivity::class.java)
             }
+            else->{}
         }
     }
 

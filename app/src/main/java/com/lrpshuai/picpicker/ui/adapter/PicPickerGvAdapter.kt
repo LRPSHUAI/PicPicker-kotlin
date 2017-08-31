@@ -22,9 +22,9 @@ class PicPickerGvAdapter(mContext: Context, list: ArrayList<PictureEntity>, mIte
     : AdapterBase<PictureEntity>(mContext, list, mItemLayoutId) {
 
     private var mListener: OnPicSelectListener? = null
-    val mIsSingle: Boolean = isSingle
+    var mIsSingle: Boolean = isSingle
     var mCanSelect: Boolean = canSelect
-    val mLimitNum: Int = limitNum
+    var mLimitNum: Int = limitNum
 
     override fun convertView(helper: ViewHolder, item: PictureEntity?) {
         if (item == null) {
@@ -73,6 +73,12 @@ class PicPickerGvAdapter(mContext: Context, list: ArrayList<PictureEntity>, mIte
                 checkBox.setImageResource(if (item.isSelected) R.mipmap.btn_picker_checked else R.mipmap.btn_picker_normal)
             }
         }
+    }
+
+    fun setLimitNum(limitNum: Int) {
+        mLimitNum = limitNum
+        mIsSingle = mLimitNum == 1
+        setIsCanSelect(true)
     }
 
     /**

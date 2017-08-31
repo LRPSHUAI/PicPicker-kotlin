@@ -15,7 +15,14 @@ import com.lrpshuai.picpicker.weight.photoviews.PhotoView
 /**
  * 图片预览的viewpager的适配器
  */
-class PicturePreviewAdapter(private val mPictures: List<PictureEntity>, private val mActivity: Activity) : PagerAdapter() {
+class PicturePreviewAdapter(pictures: List<PictureEntity>, private val mActivity: Activity) : PagerAdapter() {
+
+    var mPictures = pictures
+
+    fun setContentData(pictures: List<PictureEntity>){
+        this.mPictures = pictures
+        this.notifyDataSetChanged()
+    }
 
     override fun getCount(): Int {
         return mPictures.size

@@ -1,20 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><!--相册图片预览-->
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/layout_background_f8">
-
-    <com.lrpshuai.picpicker.weight.ToolbarView
-        android:id="@+id/tb_picpre_top"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height"
-        app:right_text_button="确定" />
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/llt_vpicker_picker"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tb_picpre_top"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <GridView
+            android:id="@+id/gv_vpicker_photos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:verticalSpacing="5dp" />
+
+        <LinearLayout
+            android:id="@+id/llt_vpicker_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_vpicker_album_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:drawableRight="@mipmap/icon_pop"
+                android:gravity="center_vertical"
+                android:padding="13dp"
+                android:text="最近照片"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/txt_size_30" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <View
+                android:id="@+id/v_vpicker_line"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_ffffff" />
+
+            <TextView
+                android:id="@+id/tv_vpicker_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:padding="13dp"
+                android:text="预览"
+                android:textColor="@color/color_dddddd"
+                android:textSize="@dimen/txt_size_30" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llt_vpicker_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
         android:orientation="vertical">
 
         <com.lrpshuai.picpicker.weight.photoviews.PhotoViewPager
@@ -31,7 +89,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_picpre_index"
+                android:id="@+id/tv_vpicker_index"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -45,7 +103,7 @@
                 android:layout_weight="1" />
 
             <LinearLayout
-                android:id="@+id/llt_picpre_original"
+                android:id="@+id/llt_vpicker_original"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -53,7 +111,7 @@
                 android:padding="13dp">
 
                 <ImageView
-                    android:id="@+id/iv_picpre_original"
+                    android:id="@+id/iv_vpicker_original"
                     android:layout_width="17dp"
                     android:layout_height="17dp"
                     android:layout_gravity="center_vertical"
@@ -76,7 +134,7 @@
                 android:layout_weight="1" />
 
             <LinearLayout
-                android:id="@+id/llt_picpre_select"
+                android:id="@+id/llt_vpicker_select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -84,7 +142,7 @@
                 android:padding="13dp">
 
                 <ImageView
-                    android:id="@+id/iv_picpre_select"
+                    android:id="@+id/iv_vpicker_select"
                     android:layout_width="17dp"
                     android:layout_height="17dp"
                     android:layout_gravity="center_vertical"
@@ -92,6 +150,7 @@
                     android:src="@mipmap/btn_picker_normal" />
 
                 <TextView
+                    android:id="@+id/tv_vpicker_selected"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -106,7 +165,7 @@
     </LinearLayout>
 
     <include
-        android:id="@+id/rlt_picpre_wait"
+        android:id="@+id/rlt_vpicker_wait"
         layout="@layout/state_wait"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

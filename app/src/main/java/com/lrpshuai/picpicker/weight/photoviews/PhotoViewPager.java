@@ -227,7 +227,7 @@ public class PhotoViewPager extends ViewPager {
 		super.setCurrentItem(item, smoothScroll);
 	}
 	public interface MyDirectListener {
-		public void getsliderLister(int indexLeftOrRight);
+		void getsliderLister(int indexLeftOrRight);
 	}
 
 }

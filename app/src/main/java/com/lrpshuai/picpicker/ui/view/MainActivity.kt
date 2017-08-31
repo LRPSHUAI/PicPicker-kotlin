@@ -23,10 +23,6 @@ import org.greenrobot.eventbus.ThreadMode
 
 class MainActivity : BaseActivity(), View.OnClickListener {
 
-    companion object {
-        val PICTURE = "picture"
-    }
-
     val REQUEST_EXTERNAL_STORAGE_PERMISSON = 6
     lateinit var picPickerGvAdapter: PicPickerGvAdapter
     var mCanOperate = false
@@ -69,7 +65,6 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 val bundle = Bundle().apply { putInt(PicturePickerActivity.SELECT_PICTURE_NUM, 9) }
                 startActi(bundle, PicturePickerActivity::class.java)
             }
-            else->{}
         }
     }
 
@@ -91,7 +86,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun receivePicData(entity: PicturesEntity) {
-        if (entity == null || entity.total == 0) return
+        if (entity.total == 0) return
         val pics: ArrayList<PictureEntity> = entity.items
         if (pics.size > 1) {
             iv_main_pic.gone()

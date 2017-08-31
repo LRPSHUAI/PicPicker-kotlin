@@ -34,13 +34,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/FullscreenTheme"
             android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".ui.view.PicturePreviewActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/FullscreenTheme"
-            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

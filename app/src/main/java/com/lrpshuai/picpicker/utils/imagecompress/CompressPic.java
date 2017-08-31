@@ -165,7 +165,7 @@ public class CompressPic {
     }
 
     private File thirdCompress(@NonNull File file) {
-        String thumb = FileUtlis.getIntence().getCacheBitmapPath() + File.separator + filename + ".png";
+        String thumb = FileUtlis.Companion.getIntence().getCacheBitmapPath() + File.separator + filename + ".png";
 
         double size;
         String filePath = file.getAbsolutePath();
@@ -229,7 +229,7 @@ public class CompressPic {
         int shortSide = 1280;
 
         String filePath = file.getAbsolutePath();
-        String thumb = FileUtlis.getIntence().getCacheBitmapPath() + File.separator + filename + ".png";
+        String thumb = FileUtlis.Companion.getIntence().getCacheBitmapPath() + File.separator + filename + ".png";
 
         long size = 0;
         long maxSize = file.length() / 5;

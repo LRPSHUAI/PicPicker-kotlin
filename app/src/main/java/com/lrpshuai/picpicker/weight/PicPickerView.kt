@@ -459,7 +459,6 @@ class PicPickerView : RelativeLayout {
         }
     }
 
-
     /**
      * 打开预览界面
      * @param list

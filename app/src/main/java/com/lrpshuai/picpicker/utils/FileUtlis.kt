@@ -23,7 +23,6 @@ class FileUtlis {
 
     /**
      * 获取图片存储路径
-
      * @return
      */
     val imageLocalPath: String
@@ -66,11 +65,8 @@ class FileUtlis {
 
     /**
      * 通过图片路径获取图片name
-
      * @param picPath
-     * *
      * @param isNeedExt 是否需要后缀
-     * *
      * @return
      */
     fun getPicNameFromPath(picPath: String, isNeedExt: Boolean): String {
